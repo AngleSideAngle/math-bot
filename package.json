@@ -1,0 +1,27 @@
+{
+  "main": "bot/index.js",
+  "name": "calc",
+  "description": "Testing discord.js",
+  "version": "1.0.0",
+  "dependencies": {
+    "discord.js": "^13.1.0",
+    "eslint": "^7.32.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "discalc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngleSideAngle/js-bot.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "AngleSideAngle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AngleSideAngle/js-bot/issues"
+  },
+  "homepage": "https://github.com/AngleSideAngle/js-bot#readme"
+}
