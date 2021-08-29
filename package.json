@@ -1,5 +1,5 @@
 {
-  "main": "bot/index.js",
+  "main": "index.js",
   "name": "calc",
   "description": "Testing discord.js",
   "version": "1.0.0",
