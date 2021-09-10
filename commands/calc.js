@@ -1,5 +1,8 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { MessageEmbed, Util } = require('discord.js');
 const math = require('mathjs');
+
+const { embedGen } = require('../util/embed');
 
 solve = (expression) => {
     try {
@@ -19,9 +22,11 @@ const cmd = new SlashCommandBuilder()
             .setRequired(true));
 
 async function action(interaction) {
-    const text = interaction.options.getString('expression');
-    message = solve(text);
-    await interaction.reply(message);
+    const query = interaction.options.getString('expression');
+    result = solve(query);
+
+    embed = embedGen(query, result, interaction.guild.me.color);
+    await interaction.reply(embed);
 };
 
 module.exports = {
