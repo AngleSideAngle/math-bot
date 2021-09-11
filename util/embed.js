@@ -12,6 +12,8 @@ embedGen = (query, result, color) => {
     return embed;
 }
 
+exports.embedGen = embedGen;
+
 module.exports = {
     embedGen : embedGen
 };

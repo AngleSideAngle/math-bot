@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed, Util } = require('discord.js');
+const { color } = require('../settings.json')
 const math = require('mathjs');
 
 const { embedGen } = require('../util/embed');
@@ -25,8 +25,8 @@ async function action(interaction) {
     const query = interaction.options.getString('expression');
     result = solve(query);
 
-    embed = embedGen(query, result, interaction.guild.me.color);
-    await interaction.reply(embed);
+    embed = embedGen(query, result, color);
+    await interaction.reply({ embeds : [embed] });
 };
 
 module.exports = {
