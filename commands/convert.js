@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const math = require('mathjs');
+
 
 const { response } = require('../util/embed');
 

@@ -1,6 +1,7 @@
-const { MessageEmbed } = require('discord.js')
+const { MessageEmbed } = require('discord.js');
+const { color } = require('../settings.json');
 
-embedGen = (query, result, color) => {
+async function response (query, result, interaction) {
     const embed = new MessageEmbed()
         .setColor(color)
         .addFields(
@@ -9,11 +10,9 @@ embedGen = (query, result, color) => {
         )
         .setTimestamp();
 
-    return embed;
+    await interaction.reply({ embeds: [embed] });
 }
 
-exports.embedGen = embedGen;
-
 module.exports = {
-    embedGen : embedGen
+    response : response
 };
