@@ -4,12 +4,15 @@ const math = require('mathjs');
 const { response } = require('../util/embed');
 
 solve = (expression) => {
+    ans = math.evaluate(expression);
+    return String(ans);
+    /*
     try {
         ans = math.evaluate(expression);
         return String(ans);
     } catch (e) {
         return 'there was an error';
-    }
+    }*/
 }
 
 const cmd = new SlashCommandBuilder()
